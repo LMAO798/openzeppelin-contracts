@@ -144,11 +144,11 @@ For a system of contracts, better integrated role management can be achieved wit
 
 Although xref:api:access.adoc#AccessControl[`AccessControl`] offers a more dynamic solution for adding permissions to your contracts than Ownable, decentralized protocols tend to become more complex after integrating new contract instances and requires you to keep track of permissions separately in each contract. This increases the complexity of permissions management and monitoring across the system.
 
-image::access-control-multiple.svg[Access Control multiple]
+image::images/access-control-multiple.svg[Access Control multiple]
 
 Protocols managing permissions in production systems often require more integrated alternatives to fragmented permissions through multiple `AccessControl` instances.
 
-image::access-manager.svg[AccessManager]
+image::images/access-manager.svg[AccessManager]
 
 The AccessManager is designed around the concept of role and target functions:
 
@@ -157,7 +157,7 @@ The AccessManager is designed around the concept of role and target functions:
 
 For a call to be authorized, the caller must bear the role that is assigned to the current target function (contract address + function selector).
 
-image::access-manager-functions.svg[AccessManager functions]
+image::images/access-manager-functions.svg[AccessManager functions]
 
 === Using `AccessManager`
 
